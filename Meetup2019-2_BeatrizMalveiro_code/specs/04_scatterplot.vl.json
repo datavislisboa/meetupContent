@@ -1,0 +1,27 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+    "data": { "url": "data/starwars.csv"},
+    "transform": [{ 
+      "filter": {
+        "field": "mass",
+        "lt": 800
+      }
+    }],
+    "mark": "circle",
+    "encoding": {
+      "x": { 
+        "field": "mass",
+        "type": "quantitative"
+      },
+      "y": {
+        "field": "height",
+        "type": "quantitative"
+      },
+      "tooltip": {
+        "field": "name",
+        "type": "nominal"
+      }
+    }
+    
+  }
+  

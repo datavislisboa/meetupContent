@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Vega Sketchpad</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <!-- Import Vega 5 & Vega-Lite 3 (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
+</head>
+
+<body>  
+    <div class="app">
+        <h1>Vega-lite 101</h1>
+        <h4>Sketchpad</h4>
+        <div id="vis" class="vega-plot"></div>
+    </div>
+  <script>  
+    const spec = "specs/01_strip_plot.vl.json"
+  	vegaEmbed('#vis', spec).then(function(result) {
+
+    }).catch(console.error);
+  </script>
+</body>
